@@ -6,7 +6,7 @@
 
 ## 使い方
 
-- **ウェブ**: GitHub Pages で公開されたURLを開き、テクストを入力して「地図を生成」
+- **ウェブ**: https://michinorishimoji.github.io/japan-text-map/ を開き、テクストを入力して「地図を生成」
 - **ローカル**: このフォルダをダウンロードして `index.html` をダブルクリック（`file://` でも動作します）
 
 ### 機能
