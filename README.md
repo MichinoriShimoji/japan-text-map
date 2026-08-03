@@ -1,5 +1,7 @@
 # テクスト→地図ジェネレーター
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21766019.svg)](https://doi.org/10.5281/zenodo.21766019)
+
 地名を含む日本語テクストを入力すると、内容を解析して注釈付きの日本白地図を
 **3案**（広域 / 標準 / 詳細）自動生成するウェブツールです。
 すべての処理はブラウザ内で完結します（サーバー通信なし）。
@@ -22,7 +24,8 @@
 - 同名の自治体（例: 府中市）は文脈の都道府県から自動解決。解決できない場合は
   既定で除外し、チップのクリックで表示に含められます
 - 各案は SVG / PNG でダウンロード可能
-- 注釈モードを選択可能: 地名ラベル+ドット (既定) / ドットのみ / 注釈なし
+- 生成後は地図上で直接編集可能: ラベル・ドットのドラッグ移動、ダブルクリックで
+  文字編集、右クリックで削除、「注釈を全部消す」で白地図化 (編集結果は保存に反映)
 - ズームの深さに応じてラベル・ドットの大きさを自動調整
 - 生成するとテクストが URL（`#q=...`）に保存され、リンクを共有するだけで
   同じ地図を再現できます
@@ -77,11 +80,11 @@ data/stations.js     駅辞書: [駅名, 市区町村コード, 経度, 緯度] 
 
 > 下地理則 (2026)『テクスト→地図ジェネレーター』(バージョン 1.0.0) [ソフトウェア].
 > https://michinorishimoji.github.io/japan-text-map/
-> DOI: 10.5281/zenodo.XXXXXXX（Zenodo連携後に確定）
+> DOI: [10.5281/zenodo.21766019](https://doi.org/10.5281/zenodo.21766019)
 
 > Shimoji, Michinori (2026). *Japan Text-to-Map Generator* (Version 1.0.0) [Software].
 > https://michinorishimoji.github.io/japan-text-map/
-> DOI: 10.5281/zenodo.XXXXXXX
+> DOI: [10.5281/zenodo.21766019](https://doi.org/10.5281/zenodo.21766019)
 
 BibTeX や各種フォーマットは GitHub の「Cite this repository」ボタン
 (CITATION.cff) からも取得できます。
@@ -98,8 +101,7 @@ BibTeX や各種フォーマットは GitHub の「Cite this repository」ボタ
 - 旧市町村辞書: [歴史的行政区域データセットβ版](https://geoshape.ex.nii.ac.jp/city/)
   （CODH／国立情報学研究所、CC BY 4.0）のGeoNLP辞書から廃止自治体を抽出して生成。
 - 間切辞書: 明治期の沖縄県の区・間切一覧をもとに手作業で作成（座標は中心集落の概算）。
-- 行政区域データを新しい年度に更新する場合は、上記リポジトリの
-  `data/municipality/topojson/s0010/` から取得し、
-  `window.MUNI_TOPO=` / `window.PREF_TOPO=` を先頭に付けて
-  `data/*.js` を置き換えてください。駅・町字辞書の再生成スクリプトは
-  開発リポジトリの `process_gazetteer.R` を参照。
+- 行政区域データを新しい年度に更新する場合は、国土数値情報から全47県の
+  N03 シェープファイルを取得し、開発リポジトリの `scripts/build_topo.sh`
+  (mapshaper による簡略化・TopoJSON化・JS埋め込みまで自動) を実行してください。
+  駅・町字辞書の再生成スクリプトは開発リポジトリの `process_gazetteer.R` を参照。

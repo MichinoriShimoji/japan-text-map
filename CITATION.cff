@@ -9,6 +9,10 @@ authors:
     given-names: Michinori
     # ORCID をお持ちなら次の行のコメントを外して記入してください
     # orcid: "https://orcid.org/0000-0000-0000-0000"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21766019"
+    description: "全バージョン共通の concept DOI"
 repository-code: "https://github.com/MichinoriShimoji/japan-text-map"
 url: "https://michinorishimoji.github.io/japan-text-map/"
 license: MIT
