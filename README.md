@@ -70,6 +70,22 @@ data/stations.js     駅辞書: [駅名, 市区町村コード, 経度, 緯度] 
 - 実装: Claude Code (Anthropic) との協働により作成
 - コードのライセンス: MIT（LICENSE を参照。同梱データは各データ提供元の規約に従います）
 
+## 引用 (Citation)
+
+研究・出版物で本ツール (または本ツールで生成した地図) を使用した場合は、
+以下の形式での引用をお願いします。
+
+> 下地理則 (2026)『テクスト→地図ジェネレーター』(バージョン 1.0.0) [ソフトウェア].
+> https://michinorishimoji.github.io/japan-text-map/
+> DOI: 10.5281/zenodo.XXXXXXX（Zenodo連携後に確定）
+
+> Shimoji, Michinori (2026). *Japan Text-to-Map Generator* (Version 1.0.0) [Software].
+> https://michinorishimoji.github.io/japan-text-map/
+> DOI: 10.5281/zenodo.XXXXXXX
+
+BibTeX や各種フォーマットは GitHub の「Cite this repository」ボタン
+(CITATION.cff) からも取得できます。
+
 ## データ出典・ライセンス
 
 - 行政区域ポリゴン: 国土交通省「国土数値情報（行政区域データ N03、2024年版）」を
