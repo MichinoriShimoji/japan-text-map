@@ -7,8 +7,6 @@ title: "テクスト→地図ジェネレーター (Japan Text-to-Map Generator)
 authors:
   - family-names: Shimoji
     given-names: Michinori
-    # ORCID をお持ちなら次の行のコメントを外して記入してください
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.21766019"
